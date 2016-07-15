@@ -3,7 +3,8 @@
 ## 一、jquery.delay - 优雅的对window.setTimeout封装
 
 ***源码：***
-```
+
+```js
 $.extend({
     delay : function (fun,sec) {
         setTimeout(function () {
@@ -18,16 +19,16 @@ $.extend({
 ```js
 // 1. 一般用法，默认延迟0秒执行，目的是让js引擎按顺序执行。
 $.delay(function(){
-fun1();
+    fun1();
 });
 
 // 2. 3秒后执行
 $.delay(function(){
-fun1();
+    fun1();
 },3000);
 
 // 3. 关联this
 $.delay(function(){
-this.fun1();
+    this.fun1();
 }.bind(this));
 ```
