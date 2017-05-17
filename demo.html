@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+
+    <style>
+        .long-hover{
+            background: #00dd49;
+            color: #ffffff;
+            width: 200px;
+            height: 200px;
+        }
+        .long-hover-active{
+            background: #dd0000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="long-hover">
+    MOUSE LONG HOVER
+</div>
+
+<script src="lib/jquery.min.js"></script>
+<script src="src/jquery.extend.js"></script>
+<script>
+    $(function () {
+        $('.long-hover').longHover(1000,function(){
+            $(this).addClass('long-hover-active');
+        },function () {
+            $(this).removeClass('long-hover-active');
+        });
+    });
+</script>
+</body>
+</html>
